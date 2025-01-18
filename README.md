@@ -33,8 +33,8 @@ Este é um jogo de memória desenvolvido inicialmente em HTML, CSS e JavaScript,
 1. Clone o repositório:
 
    ```bash
-   git clone <https://github.com/EmersonSinezio/Memory-Game.git>
-   cd <Memory-game>
+   git clone https://github.com/EmersonSinezio/Memory-Game.git
+   cd Memory-game
    ```
 
 2. Instale as dependências:
@@ -43,7 +43,7 @@ Este é um jogo de memória desenvolvido inicialmente em HTML, CSS e JavaScript,
    ```
 3. Inicie o servidor de desenvolvimento:
    ```bash
-   npm start
+   npm run dev
    ```
 
 O projeto estará disponível em http://localhost:3000.
