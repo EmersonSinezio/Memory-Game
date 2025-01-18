@@ -1,0 +1,28 @@
+// _mixins.scss
+
+// Mixin para transições
+@mixin transition(
+  $property,
+  $duration: $transition-duration,
+  $timing: ease-in-out
+) {
+  transition: $property $duration $timing;
+}
+
+// Mixin para bordas arredondadas
+@mixin border-radius($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+// Mixin para centralização de conteúdo
+@mixin center-flex($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// Mixin para sombras
+@mixin box-shadow($color: $shadow-color, $offset: 10px) {
+  box-shadow: $offset $offset $offset $color;
+}

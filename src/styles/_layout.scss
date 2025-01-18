@@ -1,0 +1,46 @@
+// _layout.scss
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  @include center-flex(column);
+  background-color: $background-color;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 100%;
+  flex-direction: column;
+}
+
+#gameBoard {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $gap-size;
+}
+
+@media only screen and (max-width: 700px) {
+  .game-board {
+    max-width: 400px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gap-size;
+  }
+
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon {
+    width: 40px;
+  }
+
+  .card_front,
+  .card_back {
+    border-radius: 10px;
+  }
+}

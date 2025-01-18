@@ -1,0 +1,69 @@
+// _components.scss
+
+.card {
+  width: $card-width;
+  height: $card-height;
+  position: relative;
+  transform-style: preserve-3d;
+  @include transition(transform, $transition-duration);
+
+  &.flip {
+    transform: rotateY(180deg);
+  }
+
+  .card_back,
+  .card_front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include border-radius($border-radius);
+    @include box-shadow($shadow-color);
+
+    backface-visibility: hidden;
+  }
+
+  .card_front {
+    transform: rotateY(180deg);
+    background-color: $secondary-color;
+  }
+
+  .card_back {
+    background-color: $primary-color;
+    font-size: $font-size-large;
+
+    &:hover {
+      transform: scale($hover-scale);
+      @include transition(all, 0.2s ease-in-out);
+      cursor: pointer;
+    }
+  }
+
+  .icon {
+    max-width: $icon-size;
+    max-height: $icon-size;
+  }
+}
+
+#gameOver {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: $text-color;
+  font-size: $font-size-header;
+  display: none;
+  @include center-flex(column);
+  top: 0;
+}
+
+#restart {
+  padding: $card-padding;
+  font-size: $font-size-base;
+  background-color: $yellow-color;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
